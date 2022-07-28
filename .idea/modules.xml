@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lsk.iml" filepath="$PROJECT_DIR$/.idea/lsk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-cloud/sc-cloud.iml" filepath="$PROJECT_DIR$/sc-cloud/sc-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-common/sc-common.iml" filepath="$PROJECT_DIR$/sc-common/sc-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-common-api/sc-common-api.iml" filepath="$PROJECT_DIR$/sc-common-api/sc-common-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-common-config/sc-common-config.iml" filepath="$PROJECT_DIR$/sc-common-config/sc-common-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-common-entity/sc-common-entity.iml" filepath="$PROJECT_DIR$/sc-common-entity/sc-common-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-common-utils/sc-common-utils.iml" filepath="$PROJECT_DIR$/sc-common-utils/sc-common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-gateway/sc-gateway.iml" filepath="$PROJECT_DIR$/sc-gateway/sc-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-parent/sc-parent.iml" filepath="$PROJECT_DIR$/sc-parent/sc-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-service/sc-service.iml" filepath="$PROJECT_DIR$/sc-service/sc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-service-base/sc-service-base.iml" filepath="$PROJECT_DIR$/sc-service-base/sc-service-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-service-item/sc-service-item.iml" filepath="$PROJECT_DIR$/sc-service-item/sc-service-item.iml" />
+    </modules>
+  </component>
+</project>

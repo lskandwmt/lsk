@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>../sc-cloud</module>
+        <module>../sc-common</module>
+        <module>../sc-service</module>
+    </modules>
+
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.7.2</version>
+    </parent>
+
+    <groupId>com.hdax.dm</groupId>
+    <artifactId>sc-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+<!--    将项目打包方式为pom方式-->
+    <packaging>pom</packaging>
+
+<!--    属性-->
+    <properties>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+    </properties>
+<!--在此处引入spring-cloud的依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+<!--                一下两个属性必须要加 type和scope 不加以后子项目不会添加依赖-->
+                <type>pom</type> <!-- 并不是以导入的方式引入的 所以要加pom -->
+                <scope>import</scope><!-- 以子项目导入的方式 -->
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <version>2.7.2</version>-->
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
