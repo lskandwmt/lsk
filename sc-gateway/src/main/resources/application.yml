@@ -1,0 +1,46 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: dm-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+#          设置地址栏服务名小写
+          lower-case-service-id: true
+#          如果设置此属性 那么网关根据服务中心操作服务是不生效的
+#          能不能同过服务发现的方式进行服务分配
+          enabled: true
+#           - 减号代表数组集合
+      routes:
+#        routes 是有问题的 是一个不玩善的路由 如果路由的路径相同
+#  那么只会访问第一个路由 并不会访问第二个路由 但是针对这种情况 spring cloud gateway并没有给出解决方案
+#        所以就只能在路径上发生改变 使其不同 才能解决根本问题
+        - id: dm-item
+#            uri 支持三种方式 1 http://localhosthost:7201 基于http访问
+#          2 loadbalance   负载平衡 在此处可以为小写
+#          3 ws://      对应的是两端请求和响应端 不是同一种语言来书写
+          uri: lb://dm-item
+#          order: 0 排序 就是一个顺序 可有可无
+#          此属性为断言 就是条件
+          predicates:
+#            path 首字母大写 而且是用等号连接
+            - Path=/api/item/index/**
+#          过滤器 当路由断言匹配之后 便会执行下面的过滤器 如果断言从一开始就不满足 那么过滤器不会被触发
+          filters:
+#            这里的 ”1“ 是将来发送微服务请求的路径要抹除掉一级的路径 数字是几边抹除几级路径 从左向右抹除
+            - StripPrefix=1
+        - id: dm-base
+          uri: lb://dm-base
+          predicates:
+            - Path=/api/base/index/**
+          filters:
+            - StripPrefix=1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka, http://localhost:8762/eureka
+
+
+

@@ -15,6 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/sc-service/sc-service.iml" filepath="$PROJECT_DIR$/sc-service/sc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sc-service-base/sc-service-base.iml" filepath="$PROJECT_DIR$/sc-service-base/sc-service-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/sc-service-item/sc-service-item.iml" filepath="$PROJECT_DIR$/sc-service-item/sc-service-item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-service-user/sc-service-user.iml" filepath="$PROJECT_DIR$/sc-service-user/sc-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc-service-users/sc-service-users.iml" filepath="$PROJECT_DIR$/sc-service-users/sc-service-users.iml" />
     </modules>
   </component>
 </project>

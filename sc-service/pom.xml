@@ -10,6 +10,8 @@
   <modules>
     <module>../sc-service-item</module>
     <module>../sc-service-base</module>
+    <module>../sc-service-user</module>
+    <module>../sc-service-users</module>
   </modules>
 
   <parent>
@@ -37,10 +39,14 @@
       <artifactId>sc-common-entity</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--    </dependency>-->
+   <!-- <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -58,6 +64,10 @@
       <groupId>com.hdax.dm</groupId>
       <artifactId>sc-common-api</artifactId>
       <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
